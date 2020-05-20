@@ -12,11 +12,12 @@ pool:
 steps:
 - task: Maven@3
   inputs:
-    mavenVersionOption: path
-    mavenDirectory: /mnt/c/Programs/apache-maven-3.6.1
+    mavenVersionOption: 'path'
+    mavenDirectory: '/mnt/c/Programs/apache-maven-3.6.1'
     mavenPomFile: 'pom.xml'
     mavenOptions: '-Xmx2048m'
-    javaHomeOption: 'JDKVersion'
+    javaHomeOption: 'path'
+    jdkDirectory: '/usr/bin'
     jdkVersionOption: '1.11'
     jdkArchitectureOption: 'x64'
     publishJUnitResults: true
